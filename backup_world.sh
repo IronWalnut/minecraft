@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Timestamp helper
-timestamp() {
-  date +"%T"
-}
-
 # Make sure this is the working dir 
 cd "$(dirname "$0")"
 
@@ -12,7 +7,8 @@ cd "$(dirname "$0")"
 git add -A
 
 # Create commit with timestamp as message
-git commit -m timestamp
+current_time=$(date "+%Y.%m.%d-%H.%M.%S")
+git commit -m current_time
 
 # Push to github
 git push origin master
