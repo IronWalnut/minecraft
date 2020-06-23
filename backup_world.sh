@@ -8,7 +8,7 @@ git add -A
 
 # Create commit with timestamp as message
 current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-git commit -m current_time
+git commit -m $current_time
 
 # Push to github
 git push origin master
