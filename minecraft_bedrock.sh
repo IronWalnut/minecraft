@@ -23,5 +23,6 @@ git push origin master
 
 
 ######## Start Minecraft Bedrock Server ########
-LD_LIBRARY_PATH=$BEDROCK_SERVER_DIR
-sudo $BEDROCK_SERVER_DIR/bedrock_server
+cd $BEDROCK_SERVER_DIR
+LD_LIBRARY_PATH=.
+sudo ./bedrock_server
