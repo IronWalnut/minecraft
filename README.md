@@ -1,3 +1,8 @@
+# Server Info
+
+### IP: waltoncloud.ddns.net
+### Port: 19132
+
 # Server Maintenance & Backups
 The server will reboot for maintenance and to back up the world files nightly at 4am EST.
 
