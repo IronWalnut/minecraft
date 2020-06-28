@@ -8,7 +8,7 @@
 BEDROCK_SERVER_DIR="/opt/minecraft_bedrock"
 USERNAME="notkevinwalton@gmail.com"
 PASSWORD="7oub$GIT*%^"
-GIT_URL="https://$USERNAME:$PASSWORD@github.com/IronWalnut/minecraft.git"
+GIT_URL="https://github.com/IronWalnut/minecraft.git"
 
 
 ######## Run GitHub Backup ########
