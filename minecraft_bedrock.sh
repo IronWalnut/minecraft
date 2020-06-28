@@ -16,7 +16,9 @@ CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
 cd $REPO_DIR && git commit -a -m "$CURRENT_TIME"
 
 # Push to GitHub using SSH (as root)
-cd $REPO_DIR && git push origin master -v
+echo "WHY THE FUCK ISNT THIS WORKING"
+cd $REPO_DIR && git push origin master -v --repo git@github.com:IronWalnut/minecraft.git
+echo "WHY THE FUCK ISNT THIS WORKING 2"
 
 ######## Start Minecraft Bedrock Server ########
 cd $BEDROCK_SERVER_DIR
