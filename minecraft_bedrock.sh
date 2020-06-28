@@ -20,7 +20,7 @@ CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
 git commit -m "$CURRENT_TIME"
 
 # Push to GitHub using SSH (as root)
-git push origin master
+git push origin master -v
 
 
 ######## Start Minecraft Bedrock Server ########
