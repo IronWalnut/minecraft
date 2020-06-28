@@ -5,24 +5,21 @@
 # It will push a backup the world, then start the server.        #
 # All directory references are relative to BEDROCK_SERVER_DIR.   #
 ##################################################################
-BEDROCK_SERVER_DIR="/opt/minecraft_bedrock"
+BEDROCK_SERVER_DIR='/opt/minecraft_bedrock'
+REPO_DIR="$BEDROCK_SERVER_DIR/worlds"
 
+######## Wait for networking stuff to come online ########
+sleep 60
 
-######## Run GitHub Backup ########
+######## Run Server GitHub Backup ########
+# Create commit on all files with timestamp as message
+CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
+cd $REPO_DIR && git commit -a -m "$CURRENT_TIME"
 
-# Stage all Files
-cd $BEDROCK_SERVER_DIR/worlds
-git add -A
-
-# Create commit with timestamp as message
-current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-git commit -m $current_time
-
-# Push to GitHub
-git push origin master
-
+# Push to GitHub using SSH (as root)
+cd $REPO_DIR && git push origin master -v
 
 ######## Start Minecraft Bedrock Server ########
 cd $BEDROCK_SERVER_DIR
-LD_LIBRARY_PATH=.
+LD_LIBRARY_PATH="$BEDROCK_SERVER_DIR"
 sudo ./bedrock_server
