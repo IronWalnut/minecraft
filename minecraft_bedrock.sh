@@ -6,23 +6,21 @@
 # All directory references are relative to BEDROCK_SERVER_DIR.   #
 ##################################################################
 BEDROCK_SERVER_DIR="/opt/minecraft_bedrock"
-USERNAME="notkevinwalton@gmail.com"
-PASSWORD="7oub$GIT*%^"
-GIT_URL="https://github.com/IronWalnut/minecraft.git"
+REPO_DIR="$BEDROCK_SERVER_DIR/worlds"
 
 
 ######## Run GitHub Backup ########
 
 # Stage all Files
-cd $BEDROCK_SERVER_DIR/worlds
+cd $REPO_DIR
 git add -A
 
 # Create commit with timestamp as message
-current_time=$(date "+%Y.%m.%d-%H.%M.%S")
-git commit -m $current_time
+CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
+git commit -m "$CURRENT_TIME"
 
-# Push to GitHub
-git push $GIT_URL master
+# Push to GitHub using SSH (as root)
+git push origin master
 
 
 ######## Start Minecraft Bedrock Server ########
