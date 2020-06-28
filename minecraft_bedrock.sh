@@ -8,17 +8,16 @@
 BEDROCK_SERVER_DIR='/opt/minecraft_bedrock'
 REPO_DIR="$BEDROCK_SERVER_DIR/worlds"
 
+######## Wait for networking stuff to come online ########
+sleep 60
 
-######## Run GitHub Backup ########
-
+######## Run Server GitHub Backup ########
 # Create commit on all files with timestamp as message
 CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
 cd $REPO_DIR && git commit -a -m "$CURRENT_TIME"
 
 # Push to GitHub using SSH (as root)
-echo "WHY THE FUCK ISNT THIS WORKING"
-cd $REPO_DIR && git push origin master -v --repo git@github.com:IronWalnut/minecraft.git
-echo "WHY THE FUCK ISNT THIS WORKING 2"
+cd $REPO_DIR && git push origin master -v
 
 ######## Start Minecraft Bedrock Server ########
 cd $BEDROCK_SERVER_DIR
