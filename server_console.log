@@ -1,0 +1,20 @@
+[master 902fa2a] 2020.08.22-04.02.51
+ 8 files changed, 1 insertion(+), 1 deletion(-)
+ delete mode 100644 worlds/World/db/032527.log
+ create mode 100644 worlds/World/db/032531.ldb
+ create mode 100644 worlds/World/db/032532.log
+ delete mode 100644 worlds/World/db/MANIFEST-032280
+ create mode 100644 worlds/World/db/MANIFEST-032530
+NO LOG FILE! - setting up server logging...
+[2020-08-22 04:02:52 INFO] Starting Server
+[2020-08-22 04:02:52 INFO] Version 1.16.20.3
+[2020-08-22 04:02:52 INFO] Session ID bf068073-ca41-441e-ac82-5a7c9a693f48
+[2020-08-22 04:02:52 INFO] Level Name: World
+[2020-08-22 04:02:52 INFO] Game mode: 0 Survival
+[2020-08-22 04:02:52 INFO] Difficulty: 2 NORMAL
+[2020-08-22 04:02:52 INFO] opening worlds/World/db
+[2020-08-22 04:02:56 INFO] IPv4 supported, port: 19132
+[2020-08-22 04:02:56 INFO] IPv6 supported, port: 19133
+[2020-08-22 04:02:56 INFO] IPv4 supported, port: 59595
+[2020-08-22 04:02:56 INFO] IPv6 supported, port: 36741
+[2020-08-22 04:02:58 INFO] Server started.
