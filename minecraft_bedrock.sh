@@ -9,7 +9,7 @@ BEDROCK_SERVER_DIR='/opt/minecraft_bedrock'
 LD_LIBRARY_PATH="$BEDROCK_SERVER_DIR"
 
 ######## Wait for networking stuff to come online ########
-sleep 60
+sleep 120
 
 ######## Run Server GitHub Backup ########
 # Create commit on all files with timestamp as message
