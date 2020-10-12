@@ -1,7 +1,7 @@
 # Server Info
 **IP:** waltoncloud.ddns.net
 
-**Port:** 19132
+**Port:** 19132 (default)
 
 # Server Maintenance & Backups
 The server will reboot for maintenance and to back up the world files on Mondays, Wednesdays, and Fridays at 4am EST. Being logged in during this time may result in corruption of the world save!
