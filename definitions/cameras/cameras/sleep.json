@@ -16,9 +16,14 @@
     "attach": {
       "offset": [ 0.0, 0.3, 0.0 ]
     },
+    "shake": {
+      "frequency": 10.0,
+      "amplitude": 5.0,
+      "noise_multiplier": 4.0
+    },
     "sleep": {
       "pre_rotation_offset": [ 0.0, -0.9, 0.8 ],
-      "pre_rotation_offset_vr": [ 0.0, -0.3, 0.0 ],
+      "pre_rotation_offset_vr": [ 0.0, -0.9, 0.8 ],
       "post_rotation_offset": [ 0.0, -1.0, 0.0 ]
     }
   },

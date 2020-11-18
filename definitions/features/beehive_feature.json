@@ -7,7 +7,7 @@
     "places_block": {
       "name": "minecraft:bee_nest",
       "states": {
-        "facing_direction": 3
+        "direction": 3
       }
     },
     "enforce_survivability_rules": true,

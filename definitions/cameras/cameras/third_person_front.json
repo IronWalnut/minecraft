@@ -30,6 +30,11 @@
       "relax_distance_smoothing_spring": 0,
       "distance_constraint_min": 0.25
     },
+    "shake": {
+      "frequency": 10.0,
+      "amplitude": 5.0,
+      "noise_multiplier": 4.0
+    },
     "sneak": {
       "camera_interpolation_rate": 0.03,
       "sneak_offset": -0.125
