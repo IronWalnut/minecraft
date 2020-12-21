@@ -1,21 +1,2 @@
 Waiting 60 seconds...
 Committing Changes...
-[master 23da2b3] 2020.12.21-04.02.46
- 5 files changed, 1 insertion(+), 1 deletion(-)
- rename worlds/World/db/{036825.log => 036827.log} (100%)
- rename worlds/World/db/{MANIFEST-036824 => MANIFEST-036826} (97%)
-Pushing to Github...
-Starting Server...
-NO LOG FILE! - setting up server logging...
-[2020-12-21 04:02:50 INFO] Starting Server
-[2020-12-21 04:02:50 INFO] Version 1.16.100.4
-[2020-12-21 04:02:50 INFO] Session ID 8883bb54-168d-4615-b9e2-bdb0ccf50b26
-[2020-12-21 04:02:50 INFO] Level Name: World
-[2020-12-21 04:02:51 INFO] Game mode: 0 Survival
-[2020-12-21 04:02:51 INFO] Difficulty: 2 NORMAL
-[INFO] opening worlds/World/db
-[INFO] IPv4 supported, port: 19132
-[INFO] IPv6 supported, port: 19133
-[INFO] IPv4 supported, port: 41423
-[INFO] IPv6 supported, port: 37245
-[INFO] Server started.
