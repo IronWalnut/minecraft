@@ -8,12 +8,17 @@ accessibility.enableTTS=Tekst-naar-spraak ingeschakeld	#
 ## Translator note:
 ## This section of phrases will be given audibly to the user using text to speech
 
+accessibility.chat.tts.gamepad.back=Druk op de %s om terug te gaan	#
+accessibility.chat.tts.gamepad.exitChat=Druk op de %s om de chat af te sluiten	#
+accessibility.chat.tts.gamepad.sendMessage=Druk op de %s om het bericht te verzenden	#
 accessibility.chat.tts.says=%s zegt %s	#
 accessibility.chat.tts.hideChat=Chat verbergen	#
 accessibility.chat.tts.keyboard=Toetsenbord	#
 accessibility.chat.tts.muteChatToggle=Alles dempen	#
 accessibility.chat.tts.sendChatMessage=Verzenden	#
 accessibility.chat.tts.textboxTitle=Chat	#
+
+accessibility.game.playerView=Spelersweergave	#
 
 accessibility.loading.done=Klaar	#
 accessibility.saving.done=Klaar	#
@@ -75,6 +80,7 @@ accessibility.play.tabRight=Druk op de %s om naar het rechtertabblad te gaan	#
 accessibility.play.legacyWorldsDelete=Verouderde wereld verwijderen	#
 
 accessibility.pause.permissions=Machtigingen	#
+accessibility.pause.profile=Profiel kiezen	#
 
 accessibility.start.buttonHelper=%s: %s		### Used for on-screen gamepad helpers (eg. "Y Button : Change User")
 
@@ -82,18 +88,22 @@ accessibility.screenName.achievements=Scherm Achievements	#
 accessibility.screenName.chat=Scherm Chatten	#
 accessibility.screenName.createNew=Nieuw scherm maken	#
 accessibility.screenName.createWorld=Scherm Wereldinstellingen maken	#
+accessibility.screenName.editCharacter=Scherm Personage bewerken	#
 accessibility.screenName.editWorldSettings=Scherm Wereldinstellingen bewerken	#
 accessibility.screenName.error=Scherm Fout	#
 accessibility.screenName.howToPlay=Scherm Speluitleg	#
+accessibility.screenName.inviteToGame=Scherm Uitnodigen voor spel	#
 accessibility.screenName.modalDialog=Pop-updialoogvenster	#
 accessibility.screenName.patchNotes=Scherm Patch-notities	#
-accessibility.screenName.pauase=Scherm Pauzeren	#
+accessibility.screenName.pause=Scherm Pauzeren	#
 accessibility.screenName.play=Scherm Spelen	#
+accessibility.screenName.profile=Scherm Profiel	#
 accessibility.screenName.realmSettings=Scherm Realm-instellingen	#
 accessibility.screenName.settings=Scherm Spelinstellingen	#
 accessibility.screenName.skinPicker=Scherm Skin kiezen	#
 accessibility.screenName.start=Hoofdmenu	#
 accessibility.screenName.vrAlignment=Scherm VR-uitlijning 	#
+accessibility.screenName.emoteWheel=Scherm Emotes	#
 
 accessibility.settings.reset=opnieuw instellen	#
 accessibility.settings.chooseSeed=Seed kiezen	#
@@ -183,6 +193,13 @@ accessibility.gamepad.bumper.left=Linker-bumper	#
 accessibility.keyboard.leftBracket=Toets vierkante haak links			### left square bracket means '[' on the english keyboard
 accessibility.keyboard.rightBracket=Toets vierkante haak rechts		### right square bracket means ']' on the english keyboard
 
+accessibility.emotes.hovered=%s, %s knop %d, %d van %d	#
+accessibility.emotes.buttonName=Emote	#
+accessibility.emotes.assigned=De emote %s is toegewezen	#
+accessibility.emotes.unassigned=Niet-toegewezen	#
+accessibility.emotes.playSuccess=Emote afspelen	#
+accessibility.emotes.playFailed=Geen emote toegewezen aan deze knop. Druk op pijl-omlaag om toegang te krijgen tot de knop Emotes wijzigen	#
+accessibility.emotes.instruction.keyboard=Druk op rechts of links om door Emote-knoppen te wisselen. Druk op de pijl-omlaag om toegang te krijgen tot de knop Emotes wijzigen.	#
 
 ## End of audible phrases section
 
@@ -401,8 +418,6 @@ authentication.store.confirmPurchase=Aankoop bevestigen	#
 authentication.store.intro=Je proefversie van Minecraft: Education Edition is beëindigd. Je moet een licentie aanschaffen om Minecraft: Education Edition te kunnen blijven spelen.	#
 authentication.store.popup.purchaseFailed.title=Er is iets misgegaan	#
 authentication.store.popup.purchaseFailed.msg=We kunnen je aankoop helaas niet voltooien. Heb je wel verbinding met internet?	#
-authentication.store.purchase.info1=Je betaling wordt in rekening gebracht via je iTunes-account en het abonnement wordt automatisch verlengd tenzij de automatische verlenging ten minste 24 uur voor het einde van de huidige periode uitgeschakeld wordt. Je account zal binnen 24 uur voor het einde van de huidige periode belast worden met de betaling voor de verlenging tegen de abonnementsprijsoptie die je eerder geselecteerd hebt. 	#
-authentication.store.purchase.info2=Je kunt na aankoop je abonnement beheren en automatisch verlengen uitschakelen via je iTunes-accountinstellingen. Indien je je abonnement annuleert nadat je abonnement is geactiveerd, ontvang je geen restitutie voor de resterende actieve periode van het abonnement. Je iTunes-account wordt voor dit abonnement aan je O365 Education-account gekoppeld, waardoor je met dit iTunes-account geen extra Minecraft: Education Edition-licenties kunt aanschaffen.	#
 authentication.store.purchase.button=Licentie kopen (%s/jaar)	#
 authentication.store.terms=Gebruiksrechtovereenkomst	#
 authentication.store.viewTermsAndConditions=Voorwaarden en bepalingen	#
@@ -1219,6 +1234,7 @@ commands.time.stop=Tijd %1$s	#
 commands.title.description=Bepaalt schermtitels.	#
 commands.title.success=Title-commando is uitgevoerd	#
 commands.titleraw.description=Bepaalt schermtitels met JSON-berichten.	#
+commands.titleraw.success=Titleraw-opdracht is uitgevoerd	#
 commands.toggledownfall.description=Schakelt het weer in en uit.	#
 commands.tp.description=Teleporteert entiteiten (spelers, mobs, etc.).	#
 commands.tp.notSameDimension=Kan niet teleporteren omdat spelers zich niet in dezelfde dimensie bevinden	#
@@ -1863,6 +1879,8 @@ realmsPlusUpgradeNotice.body=Je Realms-abonnement is bijgewerkt naar Realms Plus
 realmsPlusUpgradeNotice.continue=Doorgaan	#
 realmsPlusUpgradeNotice.viewpacks=Realms Plus-pakketten bekijken	#
 
+raytracing.RTX.name=RTX	###Brand name, don't localize
+
 network.onlinePlay.title=Spelen met vrienden	#
 network.onlinePlay.msg=Je kunt vrienden naar je werelden uitnodigen, de creaties van je vrienden bekijken en in elkaars werelden bouwen.	#
 network.onlinePlay.instruction=Vanuit het menu Spelen kun je aansluiten bij werelden van je vrienden of hen uitnodigen naar jouw werelden en realms te komen.	#
@@ -2035,7 +2053,7 @@ realmsSettingsScreen.dev_prev_page_label=Vorige	#
 realmsSettingsScreen.dev_next_page_label=Volgende	#
 realmsSettingsScreen.uploadConfirmationMessage=Hiermee wordt je huidige wereld uit je realm verwijderd en kun je deze vervangen door een nieuwe wereld. Je realmleden hebben geen toegang meer tot jouw huidige wereld. Wil je doorgaan?	#
 realmsSettingsScreen.uploadConfirmationTitle=Wereld vervangen?	#
-realmsSettingsScreen.whitelist_invite=Uitnodigen	#
+realmsSettingsScreen.allowlist_invite=Uitnodigen	#
 realmsSettingsScreen.searchBox=Zoeken...	#
 realmsSettingsScreen.unknownPackName=Onbekende naam	#
 realmsSettingsScreen.viewSubscriptionsButton=Abonnementen bekijken	#
@@ -2080,7 +2098,7 @@ xbl.transferEntitlements.error.error1=Foutnummer	#
 xbl.transferEntitlements.error.error2=Id-nummer	#
 
 playfab.account.banned.title=Geband	#
-playfab.account.banned.body=Je bent geband uit Minecraft Online. Je kunt niet op servers spelen of je aansluiten bij realms, geen multiplayerspellen hosten of hieraan deelnemen en niet de Marketplace gebruiken. Als je voor een Realm betaalt, moet je je abonnement annuleren via de winkel waar je dit hebt aangeschaft.	#
+playfab.account.banned.body=Je bent geband van Minecraft. Je kunt gedurende de ban niet spelen in je werelden (bepaalde platformen), niet op servers spelen of je aansluiten bij realms, geen multiplayerspellen hosten of hieraan deelnemen en niet de Marketplace gebruiken. Als je voor een Realm betaalt, moet je je abonnement annuleren via de winkel waar je dit hebt aangeschaft.	#
 playfab.account.banned.body.button=Meer informatie	#
 
 store.sign_in_warning.no_xbl_and_local_content=Belangrijk! Je hebt pakketten en/of Minecoins gekocht die alleen beschikbaar zijn op dit apparaat en die mogelijk verloren gaan als je apparaat niet meer werkt, je dit kwijtraakt of als je Minecraft verwijdert! Meld je aan met een Microsoft-account (gratis) om je pakketrechten en Minecoins naar dat account over te dragen, te beschermen en deze te gebruiken op elk apparaat waarmee je bent aangemeld.	#
@@ -2146,6 +2164,7 @@ dayOneExperience.world_picker_skip=Nu overslaan	#
 death.attack.anvil=%1$s is geplet door een vallend aambeeld	#
 death.attack.arrow=%1$s is neergeschoten door %2$s	#
 death.attack.arrow.item=%1$s is neergeschoten door %2$s met een %3$s	#
+death.attack.bullet=%1$s is gesniped door %2$s	#
 death.attack.cactus=%1$s is doodgeprikt	#
 death.attack.cactus.player=%1$s is tegen een cactus aangelopen in een poging te ontsnappen aan %2$s	#
 death.attack.drown=%1$s is verdronken	#
@@ -2176,10 +2195,12 @@ death.attack.onFire.player=%1$s is tot een hoopje as gereduceerd tijdens een gev
 death.attack.outOfWorld=%1$s is van de wereld gevallen	#
 death.attack.player=%1$s is vernietigd door %2$s	#
 death.attack.player.item=%1$s is vernietigd door %2$s met een %3$s	#
+death.attack.spit=%1$s is uitgespuugd door %2$s	#
 death.attack.starve=%1$s is gestorven van de honger	#
 death.attack.thorns=%1$s is gedood tijdens het aanvallen van %2$s	#
 death.attack.thrown=%1$s is afgeranseld door %2$s	#
 death.attack.thrown.item=%1$s is afgeranseld door %2$s met een %3$s	#
+death.attack.trident=%1$ is gespiesd %2$s	#
 death.attack.wither=%1$s is door een Wither geraakt	#
 death.fell.accident.generic=%1$s is van een hoge plek gevallen	#
 death.fell.accident.ladder=%1$s is van een ladder gevallen	#
@@ -2297,6 +2318,7 @@ disconnectionScreen.outdatedClientRealms=Je moet je spel bijwerken om op deze re
 disconnectionScreen.outdatedClientRealms.title=Realms is bijgewerkt	#
 disconnectionScreen.outdatedServerRealms=Je spel is bijgewerkt maar deze realm niet.	#
 disconnectionScreen.outdatedServerRealms.title=Er wordt binnen 48 uur geprobeerd een Realms-update uit te voeren	#
+disconnectionScreen.outdatedServerRealmsNonOwner.title=De Realm die je probeert te openen is van een andere versie. Neem contact op met de eigenaar van de Realm om het probleem op te lossen.	#
 disconnectionScreen.realmsServerUpdateIncoming=Je realm wordt binnenkort bijgewerkt. Jij moet ook een update uitvoeren.	#
 disconnectionScreen.realmsServerUpdateIncoming.title=Nu controleren of er een update beschikbaar is?	#
 disconnectionScreen.realmsWorldUnassigned=Versies toewijzen in ontwikkelaaropties.	#
@@ -2318,6 +2340,7 @@ disconnectionScreen.incompatiblePack.memory=Je kunt je niet bij deze wereld aans
 disconnectionScreen.incompatiblePack.graphics.raytracing=Je kunt je niet bij deze wereld aansluiten omdat je apparaat niet de compatibele hardware voor raytracing heeft	#
 disconnectionScreen.worldCorruption.message=Probeer de wereld opnieuw te openen of te herstellen vanuit een eerdere back-up	#
 disconnectionScreen.worldCorruption=Verbinding verbroken vanwege beschadiging aan wereld	#
+disconnectionScreen.hostSuspended=De verbinding is verbroken omdat de server niet beschikbaar is	#
 
 storageSpaceWarningScreen.frontend=Je hebt bijna geen opslagruimte meer! Minecraft heeft de toegang tot deze functie beperkt totdat je extra opslagruimte vrijmaakt.	#
 storageSpaceWarningScreen.lowduringgameplay=Je apparaat heeft bijna geen opslagruimte meer die Minecraft nodig heeft om werelden en instellingen op dit apparaat op te slaan. Probeer wat oude bestanden te verwijderen die je niet meer nodig hebt om nieuwe dingen te kunnen blijven opslaan.	#
@@ -3645,9 +3668,11 @@ level.import.failed.incompatibleEdition=Kan level niet importeren: niet-onderste
 invite.clear=Selectie wissen	#
 invite.send=%d uitnodigingen sturen	#
 invite.sendOne=1 uitnodiging sturen	#
+invite.sendUnnumbered=Uitnodigingen sturen	#
 invite.title=Vrienden uitnodigen voor je game	#
 invite.error.message=Sommige uitnodigingen zijn misschien niet verstuurd.	#
 invite.noFriends=Je hebt niemand toegevoegd aan de vriendenlijst!	#
+invite.noRealmFriends=Je hebt niemand toegevoegd aan je Realm.	#
 invite.OnlineFriends=Online vrienden	#
 invite.OfflineFriends=Offline vrienden	#
 invite.SuggestedFriends=Aanbevolen vrienden	#
@@ -4608,7 +4633,7 @@ item.hopper_minecart.name=Mijnkar met trechter	#
 item.tnt_minecart.name=Mijnkar met TNT	#
 item.spawn_egg.entity.agent.name=Spawn Agent	#
 item.spawn_egg.entity.bee.name=Spawn bij	#
-item.spawn_egg.entity.hoglin.name=Spawn zwijnling	#
+item.spawn_egg.entity.hoglin.name=Spawn Hoglin	#
 item.spawn_egg.entity.cat.name=Spawn kat	#
 item.spawn_egg.entity.chicken.name=Spawn kip	#
 item.spawn_egg.entity.cow.name=Spawn koe	#
@@ -5584,6 +5609,9 @@ options.graphics=Fraaie graphics	#
 options.transparentleaves=Fraaie bladeren	#
 options.bubbleparticles=Mooie bubbels	#
 options.smooth_lighting=Vloeiende verlichting	#
+options.upscaling=Upscaling	#
+options.raytracing=Raytracing	#
+options.raytracing.disabled.upsell=Deze functie is alleen beschikbaar in een wereld compatibel met raytracing. Je kunt deze werelden vinden op de Marketplace of je eigen resourcepakket met raytracing maken.	#
 options.graphics.fancy=Fraai	#
 options.graphics.fast=Snel	#
 options.renderingProfile=Graphics	#
@@ -5674,7 +5702,10 @@ options.qualityVideoTitle=Videokwaliteitsinstellingen	#
 options.reducedDebugInfo=Minder foutopsporingsinformatie	#
 options.renderClouds=Wolken	#
 options.renderDistance=Renderafstand	#
+options.raytracing.renderDistance=Renderafstand met raytracing	#
+options.raytracing.renderDistanceFormat=%s segmenten	#
 options.renderDistanceFormat=%s segmenten	#
+options.raytracing.renderdistance.warning=Deze instelling kan prestatieproblemen veroorzaken tijdens het spelen van het spel.	#
 options.resetSettings=Standaardinstellingen herstellen	#
 options.resetSettings.popUp=Weet je zeker dat je de instellingen wilt herstellen?	#
 options.maxFramerate=Maximale framesnelheid (experimenteel)	#
@@ -5776,6 +5807,8 @@ options.uiprofile.pocket=Pocket	#
 options.usetouchpad=Gedeelde besturing	#
 options.viewSubscriptions=Abonnementen	#
 options.viewSubscriptions.button.info=Info	#
+options.viewSubscriptions.button.price=%s	#
+options.viewSubscriptions.button.pricePerMonth=%s/MAAND	#
 options.viewSubscriptions.button.manage=Beheren	#
 options.viewSubscriptions.renew=Wordt om de 30 dagen vernieuwd	#
 options.viewSubscriptions.daysRemaining=Nog %d dagen	#
@@ -5871,6 +5904,7 @@ options.managePrivacy=Om je privacyinstellingen te beheren, ga je in een webbrow
 options.unlink_msa.button=Microsoft-account ontkoppelen	#
 options.unlink_msa.confirm.title=Microsoft-account ontkoppelen?	#
 options.unlink_msa.confirm.warning=WAARSCHUWING: je kunt je voortgang of aankopen op je "PlayStation 4"-systeem niet meer opslaan op je account %s als je deze ontkoppelt.	#
+options.unlink_msa.confirm.warning.2=Als je je Microsoft-account ontkoppelt vanuit dit spel, heeft dit invloed op alle Minecraft-spellen op dit platform die dit Microsoft-account gebruiken.	#
 options.unlink_msa.confirm.checkbox1=Ik heb geen toegang meer tot winkelcontent in het spel als ik speel op andere platformen.	#
 options.unlink_msa.confirm.checkbox2=Ik kan geen platformoverschrijdende spellen meer spelen met mijn vrienden op andere platformen.	#
 options.unlink_msa.confirm.checkbox3=Ik heb geen toegang meer tot Realms, inclusief actieve Realms-abonnementen.	#
@@ -6377,7 +6411,7 @@ resourcePack.legacyPackName=Verouderd resourcepakket	#
 
 storageManager.contentType.world=Wereld	#
 storageManager.contentType.worldTemplate=Wereldsjabloon	#
-storageManager.contentType.resourcePack=Resourcepakket	#
+storageManager.contentType.resourcePack=Resource	#
 storageManager.contentType.behaviorPack=Gedragspakket	#
 storageManager.contentType.skinPack=Skinpakket	#
 storageManager.contentType.invalid=Ongeldig	#
@@ -6436,7 +6470,8 @@ storageManager.mcpack=Minecraft-pakket	#
 storageManager.mcaddon=Minecraft-invoegtoepassing	#
 storageManager.mcworld=Minecraft-wereld	#
 
-
+raycasting.purchase.error=We hebben gedetecteerd dat je apparaat niet voldoet aan de systeemvereisten voor dit pakket, waardoor je dit niet kunt downloaden. Je vindt de minimale systeemvereisten hieronder: %s+ GPU: GPU-hardware compatibel met raytracing, zoals NVIDIA GeForce RTX 2060 of hoger. Raadpleeg onze veelgestelde vragen op minecraft.net voor meer informatie. %s+ RAM: 8 GB of meer %s+ CPU: Intel Core i5 of gelijkwaardig 	###the %s will be turned into linebreaks. Don't reorder.
+raycasting.purchase.error.title=Waarschuwing systeemvereisten	#
 
 resourcepack.City=City-texturepakket	#
 resourcepack.Plastic=Plastic-texturepakket	#
@@ -6679,7 +6714,7 @@ skins.store.equipped=Je hebt de skin %s aangetrokken.	#
 soundCategory.ambient=Omgeving	#
 soundCategory.block=Blokken	#
 soundCategory.hostile=Vijandelijke wezens	#
-soundCategory.master=Hoofdvolume	#
+soundCategory.master=Hoofd	#
 soundCategory.music=Muziek	#
 soundCategory.neutral=Vriendelijke wezens	#
 soundCategory.player=Spelers	#
@@ -6771,6 +6806,8 @@ store.realmsPlus.content=Content	#
 store.realmsPlus.faq=FAQ	#
 store.realmsPlus.buyFor=KOPEN VOOR %s	#
 store.realmsPlus.buyNow=NU KOPEN	#
+store.realmsPlus.buyNowPerMonth=Kopen voor %s/MAAND	#
+store.realmsPlus.buyNowTrialPerMonth=GRATIS PROEFPERIODE STARTEN (DAARNA %s/MAAND)	#
 store.realmsPlus.errorNoOffer=FOUT: GEEN AANBIEDING GEVONDEN	#
 store.realmsPlus.manageSubscription=ABONNEMENT BEHEREN	#
 store.realmsPlus.viewAllPacksTitle=VEEL WAAR VOOR JE GELD: PAKKETTEN TER WAARDE VAN RUIM §g$ 150 (USD)!§r	#
@@ -6788,8 +6825,8 @@ store.realmsPlus.noTrial.description=Je Realm en meer dan 100 Marketplace-pakket
 store.realmsPlus.noTrial.description.iap=Je Realm en meer dan 100 Marketplace-pakketten zijn direct beschikbaar. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm! Je abonnement is 30 dagen geldig voor %s.	#
 store.realmsPlus.realmName.placeholder=Realm van %s		#The string passed in here is the gamertag of the player to indicate the name of the player's world.	#
 
-store.realmsPlus.recurring.offerTrial=Je Realm en meer dan 100 Marketplace-pakketten zijn direct beschikbaar. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm! De eerste maand is gratis en daarna wordt %s per maand in rekening gebracht. Je kunt op elk moment annuleren.	#
-store.realmsPlus.recurring.withoutTrial=Je Realm en meer dan 100 Marketplace-pakketten zijn direct beschikbaar. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm! Er wordt %s per maand in rekening gebracht en je kunt op elk moment annuleren.	#
+store.realmsPlus.recurring.offerTrial=Realms Plus is een doorlopend abonnement met terugkerende abonnementskosten die elke maand automatisch in rekening worden gebracht totdat het abonnement is opgezegd.%sJouw Realm en meer dan 100 Marketplace-pakketten zijn onmiddellijk beschikbaar. Tot 10 spelers kunnen tegelijkertijd spelen en krijgen gratis toegang tot de werelden in je Realm! Je eerste 30 dagen zijn gratis en daarna wordt %s/maand in rekening gebracht. Je kunt op elk gewenst moment annuleren.	#
+store.realmsPlus.recurring.withoutTrial=Realms Plus is een doorlopend abonnement met terugkerende abonnementskosten die elke maand automatisch in rekening worden gebracht totdat het abonnement is opgezegd.%sJouw Realm en meer dan 100 Marketplace-pakketten zijn onmiddellijk beschikbaar. Tot 10 spelers kunnen tegelijkertijd spelen en krijgen gratis toegang tot de werelden in je Realm! Er wordt %s/maand in rekening gebracht en je kunt op elk gewenst moment annuleren.	#
 store.realmsPlus.consumable.offerTrial=Je Realm en meer dan 100 Marketplace-pakketten zijn direct beschikbaar. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm! De eerste 30 dagen zijn gratis en daarna kun je voor 30 dagen verlengen voor %s.	#
 store.realmsPlus.consumable.withoutTrial=Je Realm en meer dan 100 Marketplace-pakketten zijn direct beschikbaar. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm! Je abonnement is 30 dagen geldig voor %s.	#
 
@@ -6802,7 +6839,8 @@ store.realmsPlus.landing.info1.line3=- Vrienden spelen gratis mee op je Realm	#
 store.realmsPlus.landing.info2.line1=- Veilige opslag in de cloud	#
 store.realmsPlus.landing.info2.line2=- Speel op al je apparaten met Realms en de Minecraft Marketplace	#
 store.realmsPlus.landing.info2.line3=- Steun de Minecraft-community	#
-store.realmsPlus.landing.info2.line4=- Gratis proefperiode van 1 maand	#
+store.realmsPlus.landing.info2.line4=- Gratis proefperiode van 30 dagen, daarna %s per maand	#
+store.realmsPlus.landing.info2.line5=- %s per maand	#
 
 store.realmsPlus.faq.header=VEELGESTELDE VRAGEN	#
 store.realmsPlus.faq.question1=Wat is Realms Plus?	#
@@ -6845,7 +6883,7 @@ store.realmsPlus.content.viewAllPacks=ALLE PAKKETTEN BEKIJKEN	#
 store.realmsPlus.content.contentDescription=Profiteer van geweldige Minecraft-content! Met Realms Plus heb je direct toegang tot meer dan 100 Marketplace-voorwerpen, zoals mashups, werelden, skinpakketten en epische avonturen – met elke maand nieuwe toevoegingen. Je content wordt opgeslagen op je eigen persoonlijke server en is beschikbaar op elk platform waar je toegang hebt tot Realms en de Minecraft Marketplace. Je kunt met maximaal 10 spelers tegelijkertijd spelen en zij hebben ook gratis toegang tot werelden op jouw Realm!	#
 
 
-store.realmsPlus.freeTrial=PROEFPERIODE VAN 1 MAAND STARTEN	#
+store.realmsPlus.freeTrial=GRATIS PROEFPERIODE STARTEN (DAARNA %s/MAAND)	#
 
 store.inventory.button=Inventaris	#
 store.inventory.title=Inventaris	#
@@ -6929,6 +6967,8 @@ store.popup.trialUpgradeFail.title=Fout bij ontgrendelen van het spel	#
 store.popup.trialUpgradeFail.msg=Het ziet ernaar uit dat je met een ander Microsoft-account bent aangemeld dan toen je de Minecraft-proefversie hebt gedownload. Probeer het opnieuw nadat je je met dat account hebt aangemeld.	#
 store.popup.downloaded.unOwnedTemplate.title=Wereldsjabloon kopen?	#
 store.popup.downloaded.unOwnedTemplate.msg=Je hebt deze sjabloon niet en moet deze komen om hem te ontgrendelen. Wil je de sjabloon kopen?	#
+store.popup.rtx.title=Raytracingpakketten downloaden?	#
+store.popup.rtx.msg=Op deze wereld zijn resourcepakketten met raytracing toegepast die je moet downloaden om deze wereld te kunnen spelen. Je apparaat is niet compatibel raytracing, waardoor de wereld na het downloaden alleen wordt weergegeven met basistextures. Wil je dit pakket toch downloaden?	#
 store.purchase.success=Je hebt net gekocht: %s	#
 store.purchase.bundle=%d van de %d pakketten ontgrendelen?	#
 store.purchase.bundle.confirm=Ontgrendel nu!	#
@@ -7571,7 +7611,7 @@ tile.furnace.name=Oven	#
 tile.glass.name=Glas	#
 tile.golden_rail.name=Elektrisch spoor	#
 tile.grass.name=Grasblok	#
-tile.grass_path.name=Graspad	#
+tile.grass_path.name=Landpad	#
 tile.gravel.name=Grind	#
 tile.hay_block.name=Hooibaal	#
 tile.netherrack.name=Nether-steen	#
@@ -8566,7 +8606,7 @@ tips.game.21=Goud komt het meest voor in mesabiomen!	#
 tips.game.22=Dekschild kun je gebruiken om te zweven. Je vindt ze in schepen in End-steden!	#
 tips.game.23=Je kunt nieuwe functies uitproberen door wat experimenten in te schakelen!	#
 tips.game.24=Drietanden worden door drenkelingen laten vallen en kun je uitrusten of werpen.	#
-tips.game.25=Je kunt zwijnlingen fokken met karmijnrode zwammen, maar dit is wel gevaarlijk!	#
+tips.game.25=Je kunt Hoglins fokken met karmijnrode zwammen, maar dit is wel gevaarlijk!	#
 tips.game.26=Je kunt 20 voorwerpen in een oven laten smelten door een blok gedroogde kelp als brandstof te gebruiken.	#
 tips.game.27=Monsters die met skeletpijlen worden gedood, laten mogelijk muziekplaten vallen.	#
 tips.game.28=Mensen zoals JIJ maken Marketplace-content!	#
@@ -8603,7 +8643,7 @@ tips.game.58=Scheer een bijenkorf of nest om honingraat te krijgen of gebruik ee
 tips.game.59=Plaats een kampvuur onder een bijenkorf of nest om rustig honing te oogsten. Je bijen zullen je dankbaar zijn.	#
 tips.game.60=Om in de Nether opnieuw te spawnen, heb je een opgeladen respawnanker nodig.	#
 tips.game.61=Je kunt een respawnanker opladen met gloeisteen.	#
-tips.game.62=Je kunt zwijnlingen fokken met karmijnrode zwammen, maar dit is wel gevaarlijk!	#
+tips.game.62=Je kunt Hoglins fokken met karmijnrode zwammen, maar dit is wel gevaarlijk!	#
 
 splitscreen.joinPrompt=Aansluiten als speler %s	#
 splitscreen.unavailable.toastHeader=Gesplitst scherm is niet beschikbaar	#
@@ -8857,6 +8897,11 @@ dr.default.steve.skin=Steve	#
 dr.default.steve.top=Shirt van Steve	#
 dr.emotes.slot=Emote %d	#
 
+gfxDriverOutdated.title=Drivers verouderd.	#
+gfxDriverOutdated.message=Er is een nieuwe update beschikbaar voor de grafische drivers van je computer. Zonder deze update te installeren, kunnen werelden een aantal problemen of fouten vertonen. Installeer de update om Minecraft op zijn best te beleven. Meer informatie op http://aka.ms/ray-tracing-FAQ	#
+gfxDriverOutdated.doNotShowAgain=Dit bericht niet opnieuw weergeven	#
+gfxDriverOutdated.close=Sluiten	#
+
 onlinePlay.notRated=Er is geen classificatie voor online spelen	#
 onlinePlay.message=Tijdens online spelen word je mogelijk blootgesteld aan chatberichten of andere soorten door gebruikers gegenereerde content die niet is beoordeeld en die mogelijk niet geschikt zijn voor alle leeftijden.	#
 onlinePlay.doNotShowAgain=Dit scherm niet meer weergeven	#
@@ -8929,13 +8974,14 @@ dr.color.steve_blue=Steve-blauw	#
 dr.color.steve_brown=Steve-bruin	#
 dr.color.steve_mouth=Steve-mondkleur	#
 dr.color.steve_skin=Steve-huidskleur	#
-dr.color.strawberry_blone=Aardbeienblond	#
+dr.color.strawberry_blonde=Aardbeienblond	#
 dr.color.tangaroa_dark_blue=Donkerblauw	#
 dr.color.vanilla=Vanillegeel	#
 dr.color.warm_bisque=Roodoranje	#
 
 emotes.change_emotes=Emotes wijzigen	#
 emotes.execute=Uitvoeren	#
+emotes.header_text=Emotes	#
 
 ## Dynamic Package Manager
 ## Google Play APK Expansion file downloader notification
