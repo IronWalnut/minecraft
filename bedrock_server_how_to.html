@@ -100,6 +100,21 @@
                 <td></td>
             </tr>
             <tr>
+                <td>force-gamemode</td>
+                <td>true, false</td>
+                <td>false</td>
+                <td>Always</td>
+                <td>
+                    <b>force-gamemode=false</b>(or <b>force-gamemode is not defined</b> in the server.properties file)
+                    prevents the server for sending to the client gamemode values other
+                    than the gamemode value saved by the server during world creation
+                    even if those values are set in server.properties file after world creation.<br />
+                    <b>force-gamemode=true</b> forces the server to send to the client gamemode values
+                    other than the gamemode value saved by the server during world creation
+                    if those values are set in server.properties file after world creation.
+                </td>
+            </tr>
+            <tr>
                 <td>difficulty</td>
                 <td>peaceful (0), easy (1), normal (2), hard (3)</td>
                 <td>easy</td>
@@ -369,7 +384,7 @@
 
     <h2>Permissions</h2>
     <p>
-        You can adjust player specific permissions by assigning them roles in the <code>permissions.json</code> that is placed in the same directory as the server executable. The file contains a simple JSON object with XUIDs and permissions. Valid permissions are: <code>operator</code>, <code>member</code>, <code>visitor</code>. Every player that connects with these accounts will be treated according to the set premission. If you change this file while the server is running, then run the command <code>permissions reload</code> to make sure that the server knows about your new change. You could also list the current permissions with <code>permissions list</code>. Note that <code>online-mode</code> needs to be enabled for this feature to work since xuid requires online verification of the user account. If a new player that is not in this list connects, the <code>default-player-permission-level</code> option will apply.
+        You can adjust player specific permissions by assigning them roles in the <code>permissions.json</code> that is placed in the same directory as the server executable. The file contains a simple JSON object with XUIDs and permissions. Valid permissions are: <code>operator</code>, <code>member</code>, <code>visitor</code>. Every player that connects with these accounts will be treated according to the set premission. If you change this file while the server is running, then run the command <code>permission reload</code> to make sure that the server knows about your new change. You could also list the current permissions with <code>permission list</code>. Note that <code>online-mode</code> needs to be enabled for this feature to work since xuid requires online verification of the user account. If a new player that is not in this list connects, the <code>default-player-permission-level</code> option will apply.
 		
     </p>
     <p>

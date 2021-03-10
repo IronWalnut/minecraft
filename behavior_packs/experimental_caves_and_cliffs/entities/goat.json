@@ -22,10 +22,32 @@
             "target": "self"
           }
         },
-
+        "minecraft:behavior.ram_attack": {
+          "priority": 5,
+          "run_speed": 0.7,
+          "ram_speed": 1.8,
+          "ram_distance": 9.0,
+          "knockback_force": 2.5,
+          "knockback_height": 0.04,
+          "on_start": [
+            {
+              "event": "start_event",
+              "target": "self"
+            }
+          ]
+        },
         "minecraft:behavior.follow_parent": {
           "priority": 6,
-          "speed_multiplier": 1.1
+          "speed_multiplier": 1.0
+        },
+        "minecraft:behavior.jump_to_block": {
+          "priority": 8,
+          "search_width": 7,
+          "search_height": 9,
+          "minimum_path_length": 7,
+          "minimum_distance": 1,
+          "scale_factor": 0.6,
+          "cooldown_range": [ 5.0, 10.0 ]
         }
       },
 
@@ -39,13 +61,11 @@
         },
         "minecraft:behavior.breed": {
           "priority": 3,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 0.6
         },
         "minecraft:breedable": {
           "require_tame": false,
           "breed_items": "wheat",
-          "min_number_of_children": 3,
-          "max_number_of_children": 8,
           "breeds_with": {
             "mate_type": "minecraft:goat",
             "baby_type": "minecraft:goat",
@@ -54,6 +74,29 @@
               "target": "baby"
             }
           }
+        },
+        "minecraft:behavior.ram_attack": {
+          "priority": 5,
+          "run_speed": 0.7,
+          "ram_speed": 1.8,
+          "ram_distance": 9.0,
+          "knockback_force": 5.0,
+          "knockback_height": 0.03,
+          "on_start": [
+            {
+              "event": "start_event",
+              "target": "self"
+            }
+          ]
+        },
+        "minecraft:behavior.jump_to_block": {
+          "priority": 8,
+          "search_width": 8,
+          "search_height": 10,
+          "minimum_path_length": 7,
+          "minimum_distance": 1,
+          "scale_factor": 0.6,
+          "cooldown_range": [ 5.0, 10.0 ]
         },
         "minecraft:interact": {
           "interactions": [
@@ -85,7 +128,7 @@
       },
       "attack_cooldown": {
         "minecraft:attack_cooldown": {
-          "attack_cooldown_time": [ 10.0, 15.0 ],
+          "attack_cooldown_time": [ 30.0, 40.0 ],
           "attack_cooldown_complete_event": {
             "event": "attack_cooldown_complete_event",
             "target": "self"
@@ -106,7 +149,11 @@
         "can_path_over_water": true,
         "avoid_water": true,
         "avoid_damage_blocks": true,
-        "avoid_powder_snow": true
+        "blocks_to_avoid": [
+          {
+            "name": "minecraft:powder_snow"
+          }
+        ]
       },
       "minecraft:movement.basic": {
 
@@ -116,7 +163,7 @@
       "minecraft:can_climb": {
       },
       "minecraft:attack": {
-        "damage": 5
+        "damage": 1
       },
       "minecraft:collision_box": {
         "width": 0.9,
@@ -153,11 +200,11 @@
       },
       "minecraft:behavior.panic": {
         "priority": 1,
-        "speed_multiplier": 1.25
+        "speed_multiplier": 1.0
       },      
       "minecraft:behavior.tempt": {
         "priority": 4,
-        "speed_multiplier": 1.25,
+        "speed_multiplier": 1.0,
         "items": [
           "wheat"
         ]
@@ -179,7 +226,7 @@
                   "test": "is_family",
                   "subject": "other",
                   "operator": "!=",
-                  "value": "shulker"
+                  "value": "armor_stand"
                 },
                 {
                   "test": "has_component",
@@ -193,31 +240,7 @@
           }
         ],
         "must_see": true
-      },
-      "minecraft:behavior.ram_attack": {
-        "priority": 5,
-        "run_speed": 0.7,
-        "ram_speed": 1.7,
-        "ram_distance": 9.0,
-        "on_start": [
-          {
-            "event": "start_event",
-            "target": "self"
-          }
-        ]
-      },
-      "minecraft:behavior.follow_parent": {
-        "priority": 7,
-        "speed_multiplier": 1.1
-      },
-      "minecraft:behavior.jump_to_block": {
-        "priority": 8,
-        "search_width": 8,
-        "search_height": 10,
-        "minimum_path_length": 7,
-        "scale_factor": 0.6,
-        "cooldown_range": [ 5.0, 10.0 ]
-      },
+      },      
       "minecraft:damage_sensor": {
         "triggers": {
           "cause": "fall",
