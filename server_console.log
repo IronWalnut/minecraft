@@ -1,2 +1,22 @@
 Waiting 60 seconds...
 Committing Changes...
+[master f056bb0] 2021.04.23-04.02.49
+ 5 files changed, 1 insertion(+), 1 deletion(-)
+ rename worlds/World/db/{096136.log => 096138.log} (100%)
+ rename worlds/World/db/{MANIFEST-096135 => MANIFEST-096137} (99%)
+Pushing to Github...
+Starting Server...
+NO LOG FILE! - setting up server logging...
+[2021-04-23 04:02:52 INFO] Starting Server
+[2021-04-23 04:02:52 INFO] Version 1.16.210.05
+[2021-04-23 04:02:52 INFO] Session ID f467b87a-5282-477d-9dc6-0520180e1635
+[2021-04-23 04:02:52 ERROR] Unknown authority mode false, expected one of [ 'client-auth', 'server-auth', 'server-auth-with-rewind' ]
+[2021-04-23 04:02:52 INFO] Level Name: World
+[2021-04-23 04:02:52 INFO] Game mode: 0 Survival
+[2021-04-23 04:02:52 INFO] Difficulty: 2 NORMAL
+[INFO] opening worlds/World/db
+[INFO] IPv4 supported, port: 19132
+[INFO] IPv6 supported, port: 19133
+[INFO] IPv4 supported, port: 38328
+[INFO] IPv6 supported, port: 48626
+[INFO] Server started.
