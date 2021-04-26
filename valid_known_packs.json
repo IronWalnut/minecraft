@@ -8,10 +8,24 @@
 	{
 		"file_system" : "RawPath",
 		"from_disk" : true,
-		"hashes" : [ "re0r5jUDjwCXSdpmQ3eBQCwxCvcOR4YUW0Mv1pzzPhM=" ],
-		"path" : "behavior_packs/disabled_experiment",
-		"uuid" : "ef052f16-d6a5-4b4b-a1d3-644091ddafdd",
+		"hashes" : [ "R7eBNN/KMSOXqb09kHA1r0650ZnTWU1W0j7TVe+21uk=" ],
+		"path" : "behavior_packs/experimental_caves_and_cliffs_internal",
+		"uuid" : "00c11a70-6e95-4a38-8ce7-ac6917b783de",
 		"version" : "0.0.1"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"from_disk" : true,
+		"hashes" : 
+		[
+			"SOYfShLZ5KQIOG4EYAPOEaiBPhZ7qK9Slw1TCKQEx0c=",
+			"SjVhMvoSejv0/qTusjjosIpB2nYGXxR/XZKGkS4u3WU=",
+			"KMrfJYC7sBjMAj8xqBV57tr0K9lRKDaJWlibvieuERo="
+		],
+		"path" : "behavior_packs/test_vanilla_1.12",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "1.12.0"
 	},
 	
 	{
@@ -26,6 +40,13 @@
 		"path" : "behavior_packs/vanilla_1.15",
 		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "1.15.0"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"path" : "behavior_packs/vanilla_1.16.220",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "1.16.220"
 	},
 	
 	{
@@ -79,7 +100,20 @@
 	{
 		"file_system" : "RawPath",
 		"from_disk" : true,
-		"hashes" : [ "LWh3rfiz6qtj5e8JVJNGHD7M2LHGYnXhU3TE4cHOr/I=" ],
+		"hashes" : [ "re0r5jUDjwCXSdpmQ3eBQCwxCvcOR4YUW0Mv1pzzPhM=" ],
+		"path" : "behavior_packs/disabled_experiment",
+		"uuid" : "ef052f16-d6a5-4b4b-a1d3-644091ddafdd",
+		"version" : "0.0.1"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"from_disk" : true,
+		"hashes" : 
+		[
+			"LWh3rfiz6qtj5e8JVJNGHD7M2LHGYnXhU3TE4cHOr/I=",
+			"h3T6dsjPSlrIlNUYzXTTZxVqcxAFxJWZA5H9eVdrZek="
+		],
 		"path" : "behavior_packs/test_vanilla_1.11",
 		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "1.11.0"
@@ -118,18 +152,5 @@
 		"path" : "behavior_packs/vanilla",
 		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "0.0.1"
-	},
-	
-	{
-		"file_system" : "RawPath",
-		"from_disk" : true,
-		"hashes" : 
-		[
-			"SOYfShLZ5KQIOG4EYAPOEaiBPhZ7qK9Slw1TCKQEx0c=",
-			"SjVhMvoSejv0/qTusjjosIpB2nYGXxR/XZKGkS4u3WU="
-		],
-		"path" : "behavior_packs/test_vanilla_1.12",
-		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
-		"version" : "1.12.0"
 	}
 ]
