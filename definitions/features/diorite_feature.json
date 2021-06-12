@@ -5,15 +5,19 @@
       "identifier": "minecraft:diorite_feature"
     },
     "count": 33,
-    "places_block": {
-      "name": "minecraft:stone",
-      "states": {
-        "stone_type": "diorite"
-      }
-    },
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": {
+          "name": "minecraft:stone",
+          "states": {
+            "stone_type": "diorite"
+          }
+        },
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

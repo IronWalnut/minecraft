@@ -1,5 +1,5 @@
 import * as GameTest from "GameTest";
-import { BlockLocation, Blocks, ItemStack } from "Minecraft";
+import { BlockLocation, Blocks, Items, ItemStack } from "Minecraft";
 
 const TicksPerSecond = 20;
 const FiveSecondsInTicks = 5 * TicksPerSecond;
@@ -7,17 +7,13 @@ const FiveSecondsInTicks = 5 * TicksPerSecond;
 ///
 // Concrete Tests
 ///
-GameTest.register(
-  "BlockTests",
-  "concrete_solidifies_in_shallow_water",
-  (test) => {
-    test.setBlock(Blocks.concretepowder(), new BlockLocation(1, 3, 1));
+GameTest.register("BlockTests", "concrete_solidifies_in_shallow_water", (test) => {
+  test.setBlock(Blocks.concretepowder(), new BlockLocation(1, 3, 1));
 
-    test.succeedWhen(() => {
-      test.assertBlockPresent(Blocks.concrete(), new BlockLocation(1, 2, 1));
-    });
-  }
-)
+  test.succeedWhen(() => {
+    test.assertBlockPresent(Blocks.concrete(), new BlockLocation(1, 2, 1));
+  });
+})
   .maxTicks(FiveSecondsInTicks)
   .tag(GameTest.Tags.suiteDefault);
 
@@ -101,36 +97,31 @@ GameTest.register("BlockTests", "explosion_drop_location", (test) => {
 
     test.assertBlockNotPresent(Blocks.redSandstone(), redSandstonePos);
     test.assertBlockNotPresent(Blocks.sandstone(), sandstonePos);
-    test.assertItemEntityPresent(
-      new ItemStack(Blocks.redSandstone()),
-      redSandstonePos,
-      2.0
-    );
-    test.assertItemEntityPresent(
-      new ItemStack(Blocks.sandstone()),
-      sandstonePos,
-      2.0
-    );
+    test.assertItemEntityPresent(Items.redSandstone, redSandstonePos, 2.0);
+    test.assertItemEntityPresent(Items.sandstone, sandstonePos, 2.0);
   });
 })
   .maxTicks(TicksPerSecond * 10)
-  .tag(GameTest.Tags.suiteBroken)
+  .tag(GameTest.Tags.suiteDisabled)
   .maxAttempts(3);
 
-GameTest.register(
-  "BlockTests",
-  "concrete_pops_off_waterlogged_chest",
-  (test) => {
-    test.setBlock(Blocks.concretepowder(), new BlockLocation(1, 4, 1));
-    test.succeedWhen(() => {
-      const chestPos = new BlockLocation(1, 2, 1);
-      test.assertBlockPresent(Blocks.chest(), chestPos);
-      test.assertItemEntityPresent(
-        new ItemStack(Blocks.concretepowder()),
-        chestPos,
-        2
-      );
-      test.assertEntityNotPresent("falling_block");
-    });
-  }
-).maxTicks(TicksPerSecond * 5);
+GameTest.register("BlockTests", "concrete_pops_off_waterlogged_chest", (test) => {
+  test.setBlock(Blocks.concretepowder(), new BlockLocation(1, 4, 1));
+  test.succeedWhen(() => {
+    const chestPos = new BlockLocation(1, 2, 1);
+    test.assertBlockPresent(Blocks.chest(), chestPos);
+    test.assertItemEntityPresent(Items.concretePowder, chestPos, 2);
+    test.assertEntityNotPresent("falling_block");
+  });
+}).maxTicks(TicksPerSecond * 5);
+
+GameTest.register("BlockTests", "waterlogged_slab", (test) => {
+  const slabPos = new BlockLocation(1, 1, 1);
+  test.assertIsWaterlogged(slabPos, false);
+  test.succeedWhen(() => {
+    test.assertIsWaterlogged(slabPos, true);
+  });
+})
+  .tag("suite:java_parity")
+  .tag(GameTest.Tags.suiteDisabled) // Slab should be waterlogged 
+  .maxTicks(TicksPerSecond * 2);

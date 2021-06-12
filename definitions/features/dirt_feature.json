@@ -5,10 +5,14 @@
       "identifier": "minecraft:dirt_feature"
     },
     "count": 33,
-    "places_block": "minecraft:dirt",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:dirt",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

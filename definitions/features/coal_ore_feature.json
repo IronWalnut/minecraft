@@ -5,10 +5,14 @@
       "identifier": "minecraft:coal_ore_feature"
     },
     "count": 17,
-    "places_block": "minecraft:coal_ore",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:coal_ore",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

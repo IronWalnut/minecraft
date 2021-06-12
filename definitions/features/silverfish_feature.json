@@ -5,10 +5,14 @@
       "identifier": "minecraft:silverfish_feature"
     },
     "count": 8,
-    "places_block": "minecraft:monster_egg",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:monster_egg",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

@@ -5,10 +5,14 @@
       "identifier": "minecraft:diamond_ore_feature"
     },
     "count": 8,
-    "places_block": "minecraft:diamond_ore",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:diamond_ore",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

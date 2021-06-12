@@ -5,10 +5,14 @@
       "identifier": "minecraft:redstone_ore_feature"
     },
     "count": 8,
-    "places_block": "minecraft:redstone_ore",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:redstone_ore",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }

@@ -5,10 +5,14 @@
       "identifier": "minecraft:iron_ore_feature"
     },
     "count": 9,
-    "places_block": "minecraft:iron_ore",
-    "may_replace": [
+    "replace_rules": [
       {
-        "name": "minecraft:stone"
+        "places_block": "minecraft:iron_ore",
+        "may_replace": [
+          {
+            "name": "minecraft:stone"
+          }
+        ]
       }
     ]
   }
