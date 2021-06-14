@@ -8,15 +8,6 @@
 	{
 		"file_system" : "RawPath",
 		"from_disk" : true,
-		"hashes" : [ "R7eBNN/KMSOXqb09kHA1r0650ZnTWU1W0j7TVe+21uk=" ],
-		"path" : "behavior_packs/experimental_caves_and_cliffs_internal",
-		"uuid" : "00c11a70-6e95-4a38-8ce7-ac6917b783de",
-		"version" : "0.0.1"
-	},
-	
-	{
-		"file_system" : "RawPath",
-		"from_disk" : true,
 		"hashes" : 
 		[
 			"SOYfShLZ5KQIOG4EYAPOEaiBPhZ7qK9Slw1TCKQEx0c=",
@@ -26,6 +17,24 @@
 		"path" : "behavior_packs/test_vanilla_1.12",
 		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "1.12.0"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"from_disk" : true,
+		"hashes" : [ "R7eBNN/KMSOXqb09kHA1r0650ZnTWU1W0j7TVe+21uk=" ],
+		"path" : "behavior_packs/experimental_caves_and_cliffs_internal",
+		"uuid" : "00c11a70-6e95-4a38-8ce7-ac6917b783de",
+		"version" : "0.0.1"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"from_disk" : true,
+		"hashes" : [ "re0r5jUDjwCXSdpmQ3eBQCwxCvcOR4YUW0Mv1pzzPhM=" ],
+		"path" : "behavior_packs/disabled_experiment",
+		"uuid" : "ef052f16-d6a5-4b4b-a1d3-644091ddafdd",
+		"version" : "0.0.1"
 	},
 	
 	{
@@ -71,6 +80,13 @@
 	
 	{
 		"file_system" : "RawPath",
+		"path" : "behavior_packs/vanilla_1.17.0",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "1.17.0"
+	},
+	
+	{
+		"file_system" : "RawPath",
 		"path" : "resource_packs/vanilla",
 		"uuid" : "0575c61f-a5da-4b7f-9961-ffda2908861e",
 		"version" : "0.0.1"
@@ -95,15 +111,6 @@
 		"path" : "behavior_packs/vanilla_1.16.200",
 		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "1.16.200"
-	},
-	
-	{
-		"file_system" : "RawPath",
-		"from_disk" : true,
-		"hashes" : [ "re0r5jUDjwCXSdpmQ3eBQCwxCvcOR4YUW0Mv1pzzPhM=" ],
-		"path" : "behavior_packs/disabled_experiment",
-		"uuid" : "ef052f16-d6a5-4b4b-a1d3-644091ddafdd",
-		"version" : "0.0.1"
 	},
 	
 	{
