@@ -1,5 +1,5 @@
 import * as GameTest from "GameTest";
-import { BlockLocation, Blocks, Items, ItemStack } from "Minecraft";
+import { BlockLocation, BlockTypes, Items, ItemStack } from "Minecraft";
 
 const dispenserDelay = 5; // Number of ticks to wait for the dispenser to use or dispense an item
 const armorSlotTorso = 1;
@@ -177,14 +177,14 @@ GameTest.register("DispenserTests", "dispenser_minecart", (test) => {
 GameTest.register("DispenserTests", "dispenser_water", (test) => {
   const waterPos = new BlockLocation(1, 2, 1);
   const dispenserPos = new BlockLocation(0, 2, 1);
-  test.assertBlockNotPresent(Blocks.water(), waterPos);
+  test.assertBlockTypeNotPresent(BlockTypes.water, waterPos);
   test.assertContainerContains(new ItemStack(Items.waterBucket, 1, 0), dispenserPos);
 
   test.pressButton(new BlockLocation(0, 2, 0));
 
   test.succeedOnTickWhen(dispenserDelay, () => {
     test.assertContainerContains(new ItemStack(Items.bucket, 1, 0), dispenserPos);
-    test.assertBlockPresent(Blocks.water(), waterPos);
+    test.assertBlockTypePresent(BlockTypes.water, waterPos);
   });
 })
   .maxTicks(threeSecondsInTicks)
@@ -207,13 +207,12 @@ GameTest.register("DispenserTests", "dispenser_charge_respawn_anchor", (test) =>
   const dispenserPos = new BlockLocation(0, 2, 1);
   test.assertContainerContains(new ItemStack(Items.glowstone, 1, 0), dispenserPos);
 
-    test.assertBlockState("respawn_anchor_charge", 0, respawnAnchorPos);
-    test.succeedWhen(() => {
-      test.assertBlockState("respawn_anchor_charge", 1, respawnAnchorPos);
-      test.assertContainerEmpty(dispenserPos);
-    });
-  }
-)
+  test.assertBlockState("respawn_anchor_charge", 0, respawnAnchorPos);
+  test.succeedWhen(() => {
+    test.assertBlockState("respawn_anchor_charge", 1, respawnAnchorPos);
+    test.assertContainerEmpty(dispenserPos);
+  });
+})
   .maxTicks(threeSecondsInTicks)
   .tag(GameTest.Tags.suiteDefault);
 
@@ -230,7 +229,7 @@ GameTest.register("DispenserTests", "dispenser_fire", (test) => {
 
   test.succeedOnTickWhen(dispenserDelay, () => {
     for (const pos of firePositions) {
-      test.assertBlockPresent(Blocks.fire(), pos);
+      test.assertBlockTypePresent(BlockTypes.fire, pos);
     }
   });
 })

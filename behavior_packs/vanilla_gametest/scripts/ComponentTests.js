@@ -78,7 +78,7 @@ GameTest.register("ComponentTests", "health_component", (test) => {
   const sheepId = "minecraft:sheep<minecraft:ageable_grow_up>";
   const sheepPos = new BlockLocation(4, 2, 2);
   const sheep = test.spawn(sheepId, sheepPos);
-  test.assertEntityInstancePresent(sheep);
+  test.assertEntityInstancePresent(sheep, sheepPos);
   test.pullLever(new BlockLocation(2, 3, 2));
 
   const healthComponent = sheep.getComponent("minecraft:health");

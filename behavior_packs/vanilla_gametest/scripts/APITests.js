@@ -1,8 +1,8 @@
 import * as GameTest from "GameTest";
-import { BlockLocation, Effects, Items, ItemStack, Location, World } from "Minecraft";
+import { BlockLocation, BlockTypes, ExplosionOptions, Effects, Items, ItemStack, Location, World } from "Minecraft";
 
 GameTest.register("APITests", "on_entity_created", (test) => {
-  World.addEventListener("onEntityCreated", (entity) => {
+  const entityCreatedCallback = World.events.createEntity.subscribe((entity) => {
     if (entity) {
       test.succeed();
     } else {
@@ -10,9 +10,10 @@ GameTest.register("APITests", "on_entity_created", (test) => {
     }
   });
   test.spawn("minecraft:horse<minecraft:ageable_grow_up>", new BlockLocation(1, 2, 1));
+  World.events.createEntity.unsubscribe(entityCreatedCallback);
 })
   .structureName("ComponentTests:animal_pen")
-  .tag(GameTest.Tags.suiteDisabled); // This test will succeed multiple times, need to unregister the listener
+  .tag(GameTest.Tags.suiteDefault);
 
 GameTest.register("APITests", "assert_is_waterlogged", (test) => {
   const waterChestLoc = new BlockLocation(5, 2, 1);
@@ -60,7 +61,7 @@ GameTest.register("APITests", "assert_entity_data", (test) => {
   const pigLoc = new BlockLocation(1, 2, 1);
   test.spawn(pigId, pigLoc);
   test.succeedWhen(() => {
-    test.assertEntityData(pigLoc, pigId, (entity) => entity.getName !== undefined);
+    test.assertEntityData(pigLoc, pigId, (entity) => entity.id !== undefined);
   });
 })
   .structureName("ComponentTests:animal_pen")
@@ -73,12 +74,8 @@ GameTest.register("APITests", "add_effect", (test) => {
   const duration = 20;
   villager.addEffect(Effects.poison, duration, 1);
 
-  test.assertEntityData(
-    villagerLoc,
-    villagerId,
-    (entity) => entity.getEffect(Effects.poison).getDuration() == duration
-  );
-  test.assertEntityData(villagerLoc, villagerId, (entity) => entity.getEffect(Effects.poison).getAmplifier() == 1);
+  test.assertEntityData(villagerLoc, villagerId, (entity) => entity.getEffect(Effects.poison).duration == duration);
+  test.assertEntityData(villagerLoc, villagerId, (entity) => entity.getEffect(Effects.poison).amplifier == 1);
 
   test.runAfterDelay(duration, () => {
     test.assertEntityData(villagerLoc, villagerId, (entity) => entity.getEffect(Effects.poison) === undefined);
@@ -216,4 +213,143 @@ GameTest.register("APITests", "location", (test) => {
   test.succeed();
 })
   .structureName("ComponentTests:platform")
+  .tag(GameTest.Tags.suiteDefault);
+
+GameTest.register("APITests", "create_explosion_basic", (test) => {
+  let overworld = World.getDimension("overworld");
+  const center = new BlockLocation(2, 3, 2);
+
+  test.assertBlockTypePresent(BlockTypes.cobblestone, center);
+
+  const loc = test.worldLocation(center);
+  const explosionLoc = new Location(loc.x + 0.5, loc.y + 0.5, loc.z + 0.5);
+  overworld.createExplosion(explosionLoc, 10, new ExplosionOptions());
+
+  for (let x = 1; x <= 3; x++) {
+    for (let y = 2; y <= 4; y++) {
+      for (let z = 1; z <= 3; z++) {
+        test.assertBlockTypeNotPresent(BlockTypes.cobblestone, new BlockLocation(x, y, z));
+      }
+    }
+  }
+
+  test.succeed();
+})
+  .padding(10) // The blast can destroy nearby items and mobs
+  .tag(GameTest.Tags.suiteDefault);
+
+GameTest.register("APITests", "create_explosion_advanced", (test) => {
+  let overworld = World.getDimension("overworld");
+  const center = new BlockLocation(2, 3, 2);
+
+  const pigId = "minecraft:pig<minecraft:ageable_grow_up>";
+  const pigLoc = new BlockLocation(2, 4, 2);
+  test.spawn(pigId, pigLoc);
+
+  const loc = test.worldLocation(center);
+  const explosionLoc = new Location(loc.x + 0.5, loc.y + 0.5, loc.z + 0.5);
+  let explosionOptions = new ExplosionOptions();
+
+  test.assertBlockTypePresent(BlockTypes.cobblestone, center);
+
+  // Start by exploding without breaking blocks
+  explosionOptions.breaksBlocks = false;
+  const creeper = test.spawn("minecraft:creeper", new BlockLocation(1, 2, 1));
+  explosionOptions.source = creeper;
+  test.assertEntityPresent(pigId, pigLoc);
+  overworld.createExplosion(explosionLoc, 10, explosionOptions);
+  creeper.kill();
+  test.assertEntityNotPresent(pigId, pigLoc);
+  test.assertBlockTypePresent(BlockTypes.cobblestone, center);
+
+  // Next, explode with fire
+  explosionOptions = new ExplosionOptions();
+  explosionOptions.causesFire = true;
+
+  let findFire = () => {
+    let foundFire = false;
+    for (let x = 0; x <= 4; x++) {
+      for (let z = 0; z <= 4; z++) {
+        try {
+          test.assertBlockTypePresent(BlockTypes.fire, new BlockLocation(x, 3, z));
+          foundFire = true;
+          break;
+        } catch (e) {}
+      }
+    }
+    return foundFire;
+  };
+
+  test.assert(!findFire(), "Unexpected fire");
+  overworld.createExplosion(explosionLoc, 10, explosionOptions);
+  test.assertBlockTypeNotPresent(BlockTypes.cobblestone, center);
+  test.assert(findFire(), "No fire found");
+
+  // Finally, explode in water
+  explosionOptions.allowUnderwater = true;
+  const belowWaterLoc = new BlockLocation(2, 1, 2);
+  test.assertBlockTypeNotPresent(BlockTypes.air, belowWaterLoc);
+  overworld.createExplosion(explosionLoc, 7, explosionOptions);
+  test.assertBlockTypePresent(BlockTypes.air, belowWaterLoc);
+  test.succeed();
+})
+  .padding(10) // The blast can destroy nearby items and mobs
+  .tag(GameTest.Tags.suiteDefault);
+
+GameTest.register("APITests", "triggerEvent", (test) => {
+  const creeper = test.spawn("creeper", new BlockLocation(1, 2, 1));
+  creeper.triggerEvent("minecraft:start_exploding_forced");
+
+  test.succeedWhen(() => {
+    test.assertEntityNotPresentInArea("creeper");
+  });
+})
+  .structureName("ComponentTests:glass_cage")
+  .tag(GameTest.Tags.suiteDefault);
+
+GameTest.register("APITests", "chat", (test) => {
+  test.print("subscribing");
+
+  const chatCallback = World.events.beforeChat.subscribe((eventData) => {
+    if (eventData.message === "!killme") {
+      eventData.sender.kill();
+      eventData.canceled = true;
+    } else if (eventData.message === "!players") {
+      test.print(`There are ${eventData.targets.length} players in the server.`);
+      for (const target of eventData.targets) {
+        test.print("Player: " + target.name);
+      }
+    } else {
+      eventData.message = `Modified '${eventData.message}'`;
+    }
+  });
+
+  test
+    .startSequence()
+    .thenIdle(200)
+    .thenExecute(() => {
+      World.events.beforeChat.unsubscribe(chatCallback);
+      test.print("unsubscribed");
+    })
+    .thenSucceed();
+})
+  .structureName("ComponentTests:platform")
+  .maxTicks(1000)
+  .tag(GameTest.Tags.suiteDisabled);
+
+GameTest.register("APITests", "add_effect_event", (test) => {
+  const villagerId = "minecraft:villager_v2<minecraft:ageable_grow_up>";
+  const villager = test.spawn(villagerId, new BlockLocation(1, 2, 1));
+
+  const addEffectCallback = World.events.addEffect.subscribe((eventData) => {
+    test.assert(eventData.entity.id === "minecraft:villager_v2", "Unexpected id");
+    test.assert(eventData.effect.displayName === "Poison II", "Unexpected display name");
+    test.assert(eventData.effectState === 1, "Unexpected effect state");
+    test.succeed();
+  });
+
+  villager.addEffect(Effects.poison, 5, 1);
+  World.events.beforeChat.unsubscribe(addEffectCallback);
+})
+  .structureName("ComponentTests:animal_pen")
   .tag(GameTest.Tags.suiteDefault);

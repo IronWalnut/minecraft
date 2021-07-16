@@ -12,3 +12,7 @@ import "scripts/GameTestExtensions.js";
 import "scripts/MinecartTests.js";
 import "scripts/MobTests.js";
 import "scripts/PathFindingTests.js";
+import "scripts/FlyingMachineTests.js";
+import "scripts/PistonTests.js";
+import "scripts/TntTests.js";
+import "scripts/SmallMobTests.js";
