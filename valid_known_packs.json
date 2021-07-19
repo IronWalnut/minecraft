@@ -39,6 +39,20 @@
 	
 	{
 		"file_system" : "RawPath",
+		"path" : "behavior_packs/vanilla",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "0.0.1"
+	},
+	
+	{
+		"file_system" : "RawPath",
+		"path" : "behavior_packs/chemistry",
+		"uuid" : "6baf8b62-8948-4c99-bb1e-a0cb35dc4579",
+		"version" : "1.0.0"
+	},
+	
+	{
+		"file_system" : "RawPath",
 		"path" : "resource_packs/chemistry",
 		"uuid" : "0fba4063-dba1-4281-9b89-ff9390653530",
 		"version" : "1.0.0"
@@ -60,22 +74,23 @@
 	
 	{
 		"file_system" : "RawPath",
-		"from_disk" : true,
-		"hashes" : 
-		[
-			"n3re8LNzyZmk7axtAMt82j9JJOmb+EGRlZLwejdJQQY=",
-			"2dId5tr62OWOd0xyS8n6hhx6O6zRbhss5GPvgfpzJPo="
-		],
-		"path" : "behavior_packs/experimental_caves_and_cliffs",
-		"uuid" : "8a779527-33b2-4dc6-abf4-947860a6d16d",
-		"version" : "0.0.1"
+		"path" : "behavior_packs/vanilla_1.14",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "1.14.0"
 	},
 	
 	{
 		"file_system" : "RawPath",
-		"path" : "behavior_packs/vanilla_1.14",
-		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
-		"version" : "1.14.0"
+		"from_disk" : true,
+		"hashes" : 
+		[
+			"n3re8LNzyZmk7axtAMt82j9JJOmb+EGRlZLwejdJQQY=",
+			"2dId5tr62OWOd0xyS8n6hhx6O6zRbhss5GPvgfpzJPo=",
+			"qqZZU+mvET0WfGb9a4bOhrAmPhrsWwnmn/0IQLFfUCQ="
+		],
+		"path" : "behavior_packs/experimental_caves_and_cliffs",
+		"uuid" : "8a779527-33b2-4dc6-abf4-947860a6d16d",
+		"version" : "0.0.1"
 	},
 	
 	{
@@ -115,6 +130,13 @@
 	
 	{
 		"file_system" : "RawPath",
+		"path" : "behavior_packs/vanilla_1.17.10",
+		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
+		"version" : "1.17.10"
+	},
+	
+	{
+		"file_system" : "RawPath",
 		"from_disk" : true,
 		"hashes" : 
 		[
@@ -144,20 +166,6 @@
 		"file_system" : "RawPath",
 		"path" : "behavior_packs/vanilla_gametest",
 		"uuid" : "fd375b0a-4bdd-4572-9268-e55a79cf99d3",
-		"version" : "0.0.1"
-	},
-	
-	{
-		"file_system" : "RawPath",
-		"path" : "behavior_packs/chemistry",
-		"uuid" : "6baf8b62-8948-4c99-bb1e-a0cb35dc4579",
-		"version" : "1.0.0"
-	},
-	
-	{
-		"file_system" : "RawPath",
-		"path" : "behavior_packs/vanilla",
-		"uuid" : "fe9f8597-5454-481a-8730-8d070a8e2e58",
 		"version" : "0.0.1"
 	}
 ]
